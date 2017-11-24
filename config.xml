@@ -13,7 +13,7 @@
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
-    <plugin name="phonegap-plugin-push" source="npm" spec="2.0.0"></plugin>
+    <plugin name="cordova-plugin-fcm"></plugin>
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
@@ -43,8 +43,5 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
-    </platform>
-    <platform name="android">
-      <resource-file src="google-services.json" target="google-services.json" />
     </platform>
 </widget>

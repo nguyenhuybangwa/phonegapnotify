@@ -46,48 +46,11 @@ var resultArr = [];
 
 function pushFcm() {
     alert('pushFcm startup');
+
+    FCMPlugin.getToken(function(token){
+        alert(token);
+    });
     
-    const push = PushNotification.init({
-        android: {
-        },
-        browser: {
-            pushServiceURL: 'http://push.api.phonegap.com/v1/push'
-        },
-        ios: {
-            alert: "true",
-            badge: "true",
-            sound: "true"
-        },
-        windows: {}
-    });
-
-    push.on('registration', (data) => {
-        alert('registration');
-        alert(data.registrationId);
-        
-        resultArr.push('<li>registration</li>');
-        resultArr.push('<li>${data.registrationId}</li>');
-        showResult();
-        // data.registrationId
-    });
-
-    push.on('notification', (data) => {
-        resultArr.push('<li>notification</li>');
-        showResult();
-
-        // data.message,
-        // data.title,
-        // data.count,
-        // data.sound,
-        // data.image,
-        // data.additionalData
-    });
-
-    push.on('error', (e) => {
-        resultArr.push('<li>error</li>');
-        showResult();
-        // e.message
-    });
 }
 
 function showResult() {
