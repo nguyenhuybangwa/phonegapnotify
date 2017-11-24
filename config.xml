@@ -14,7 +14,7 @@
     <preference name="StatusBarBackgroundColor" value="#ee6e73" />
     <preference name="StatusBarStyle" value="blacktranslucent" />
     <plugin name="cordova-plugin-fcm"></plugin>
-    <plugin name="cordova-plugin-fcm-config" spec="cordova-plugin-fcm-config" />
+    <plugin name="cordova-plugin-fcm-config"></plugin>
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
